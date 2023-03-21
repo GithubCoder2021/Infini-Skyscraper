@@ -1,4 +1,3 @@
-
 function normal(log) {
   if (log != Infinity) {
     if (log >= 1e21) {

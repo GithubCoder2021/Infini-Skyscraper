@@ -19,7 +19,7 @@ function addLogs(a,b){
   if (a > b) {
     return a + (Math.log10(1+(10**(b - a))));
   } else {
-    return a + (Math.log10(1+(10**(a - b))));
+    return b + (Math.log10(1+(10**(a - b))));
   }
 }
 

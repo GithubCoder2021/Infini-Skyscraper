@@ -1,0 +1,24 @@
+body{
+  font-family: Arial Black, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.nav{
+  float: left;
+}
+
+.navbar{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+button{
+  padding: 5px 7.5px;
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  
+}

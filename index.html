@@ -8,18 +8,17 @@
   <body>
     <center>
       <ul class="navbar">
-        <li> <button class="nav" onclick="tab('elevator')">Elevator</button></li>
-        <li> <button class="nav" onclick="tab('stats')">Stats</button></li>
-        <li> <button class="nav" onclick="tab('options')">Options</button></li>
+      <li> <button class="nav" onclick="tab('elevator')">Elevator</button></li>
+      <li> <button class="nav" onclick="tab('stats')">Stats</button></li>
+      <li> <button class="nav" onclick="tab('options')">Options</button></li>
       </ul>
       </center>
       <br>
       <center>
       <h1>You are at Floor <span id="floor">0</span></h1>
       <h2> You are going up by <span id="flPS">1</span> floor(s) per second</h2>
-      <button onclick="speedInc()">Increase speed for <span id="spCost"> 10</span> floors </button>
-       <button onclick="prestige()">Sacrifice journey for +<span id="sacrifice">0</span> points </button>
-    </center>
+      <button onclick="speedInc()">Increase speed for <span id="spCost">5</span> floors </button>
+      <button onclick="sacrifice()" id="sacButton">Sacrifice journey for +x<span id="sacrifice">1</span> multiplier  </button> 
     <button onclick="save()">Save</button>
     <button onclick="resetGame()">RESET</button>
     <script src="ee308.js"></script>

@@ -10,10 +10,9 @@ setInterval(function(){
 },50)
 
 function speedInc(){
-	if (floors >= speedCost){
-  	floors = subtractLogs(floors,speedCost);
+  if (floors >= speedCost){
+    floors = subtractLogs(floors,speedCost);
     advance = multiplyLogs(advance,0.30103);
-    speedCost = multiplyLogs(speedCost,0.3);
-    
+    speedCost = multiplyLogs(speedCost,0.3);   
   }
 }

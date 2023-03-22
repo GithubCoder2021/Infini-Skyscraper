@@ -1,19 +1,23 @@
-let floors = -Infinity;
-let advance = 0;
-let speedCost = 0;
+var game = {
+ floors : -Infinity,
+ advance: 0,
+ speedCost: 1
+ }
+
 
 setInterval(function(){
-	document.getElementById("floor").innerText = normal(floors);
-  document.getElementById("flPS").innerText = normal(advance);
-  document.getElementById("spCost").innerText = normal(speedCost);
-  floors = addLogs(floors,divideLogs(advance,1.30103));
+	document.getElementById("floor").innerText = normal(game.floors);
+  document.getElementById("flPS").innerText = normal(game.advance);
+  document.getElementById("spCost").innerText = normal(game.speedCost);
+  game.floors = addLogs(game.floors,divideLogs(game.advance,1.30103));
 },50)
 
 function speedInc(){
-  if (floors >= speedCost){
-    floors = subtractLogs(floors,speedCost);
-    advance = multiplyLogs(advance,0.30103);
-    speedCost = multiplyLogs(speedCost,0.3);   
+	if (game.floors >= game.speedCost){
+  	game.floors = subtractLogs(game.floors,game.speedCost);
+    game.advance = multiplyLogs(game.advance,0.30103);
+    game.speedCost = multiplyLogs(game.speedCost,0.3);
+    
   }
 }
 
@@ -40,7 +44,7 @@ function resetGame(){
 	game.floors = -Infinity;
 	game.advance = 0;
 	game.speedCost = 1;
-   save();
+        save();
   }
 }
 loadGame();

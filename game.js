@@ -68,7 +68,7 @@ function resetGame(){
 function sacrifice(){
 	sacrificeCon =confirm("You will gain a Sacrificial multiplier at the expense of your progress. Are you sure you want to sacrifice your journey?");
  if (sacrificeCon == true) {
-  game.sacrificeMult = addLogs(game.sacrificeMult,game.sacGain);
+  game.sacrificeMult = multiplyLogs(game.sacrificeMult,game.sacGain);
 	game.floors = -Infinity;
 	game.advance = game.sacrificeMult;
 	game.speedCost = 0.699;

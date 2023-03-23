@@ -7,6 +7,7 @@
   </head>
   <body>
    <center>
+       <center>
       <ul class="navbar">
       <li> <button class="nav" onclick="tab('elevator')">Elevator</button></li>
       <li> <button class="nav" onclick="tab('achievements')">Achievements</button></li>
@@ -18,8 +19,9 @@
       <div id="elevator">
       <h1>You are at Floor <span id="floor">0</span></h1>
       <h2> You are going up by <span id="flPS">1</span> floor(s) per second</h2>
+      <h3 id="sacMult">Your sacrifice multiplier is x<span id="sMult">1</span></h3>
       <button onclick="speedInc()">Increase speed for <span id="spCost">5</span> floors </button>
-      <button onclick="sacrifice()" id="sacButton">Sacrifice journey for x<span id="sacrifice">1</span> multiplier  </button> 
+      <button onclick="sacrifice()" id="sacButton">Sacrifice journey for +x<span id="sacrifice">1</span> multiplier  </button> 
       </div>
      <div id="achievements">
      <ol id="achs">

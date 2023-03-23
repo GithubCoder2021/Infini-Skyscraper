@@ -6,21 +6,35 @@
     <title>Infini-Skyscraper</title>
   </head>
   <body>
-    <center>
+   <center>
       <ul class="navbar">
       <li> <button class="nav" onclick="tab('elevator')">Elevator</button></li>
-      <li> <button class="nav" onclick="tab('stats')">Stats</button></li>
+      <li> <button class="nav" onclick="tab('achievements')">Achievements</button></li>
       <li> <button class="nav" onclick="tab('options')">Options</button></li>
       </ul>
       </center>
       <br>
       <center>
+      <div id="elevator">
       <h1>You are at Floor <span id="floor">0</span></h1>
       <h2> You are going up by <span id="flPS">1</span> floor(s) per second</h2>
       <button onclick="speedInc()">Increase speed for <span id="spCost">5</span> floors </button>
-      <button onclick="sacrifice()" id="sacButton">Sacrifice journey for +x<span id="sacrifice">1</span> multiplier  </button> 
+      <button onclick="sacrifice()" id="sacButton">Sacrifice journey for x<span id="sacrifice">1</span> multiplier  </button> 
+      </div>
+     <div id="achievements">
+     <ol id="achs">
+       <li><p><span id="ach1">Start climbing: Reach 2 floors a second</span></p></li>
+       <li><p><span id="ach2">Zoom: Reach 10 floors a second</span></p></li>
+       <li><p><span id="ach3">Up the ESB: Reach 102 floors</span></p></li>
+       <li><p><span id="ach4">Up we Go: Reach 500 floors</span></p></li>
+       <li><p><span id="ach5">Sacrifice: Do a Sacrifice</span></p></li>
+     </ol>
+     </div>
+     <div id="options">
     <button onclick="save()">Save</button>
     <button onclick="resetGame()">RESET</button>
+    </div>
+    </center>
     <script src="ee308.js"></script>
     <script src="game.js"></script>
   </body>

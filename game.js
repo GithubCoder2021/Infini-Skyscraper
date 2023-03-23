@@ -4,15 +4,22 @@ var game = {
   speedCost: 0.477,
   sacrificeMult: 0,
   sacGain: 0,
+  lastTick: Date.now()
 };
 
 
 setInterval(function() {
 document.getElementById("floor").innerText = normal(game.floors);
 document.getElementById("flPS").innerText = normal(game.advance);
+if (game.sacrificeMult <= 6) {
+  document.getElementById("sMult").innerText = (10 ** game.sacrificeMult).toFixed(2);
+} else {
+  document.getElementById("sMult").innerText = normal(game.sacGain);
+}
+
 document.getElementById("spCost").innerText = normal(game.speedCost);
-if (game.sacGain <= 308) {
-  document.getElementById("sacrifice").innerText = (10 ** game.sacGain).toFixed(3);
+if (game.sacGain <= 6) {
+  document.getElementById("sacrifice").innerText = (10 ** game.sacGain).toFixed(2);
 } else {
   document.getElementById("sacrifice").innerText = normal(game.sacGain);
 }
@@ -25,7 +32,11 @@ if (game.floors >= 2.477) {
 updateAch();
 
 game.floors = addLogs(game.floors, divideLogs(game.advance, 1.30103));
-
+if (game.sacrificeMult <= 0) {
+    document.getElementById("sacMult").style.display = "none";
+  } else{
+    document.getElementById("sacMult").style.display = "block";
+  }
 }, 50);
 
 function speedInc() {
@@ -108,4 +119,3 @@ function updateAch() {
 }
 
 tab('elevator');
-

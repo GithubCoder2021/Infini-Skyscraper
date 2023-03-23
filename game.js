@@ -4,7 +4,6 @@ var game = {
   speedCost: 0.477,
   sacrificeMult: 0,
   sacGain: 0,
-  lastTick: Date.now()
 };
 
 
@@ -62,7 +61,7 @@ function resetGame() {
   if (restart == true) {
     game.floors = -Infinity;
     game.advance = 0;
-    game.speedCost = 0.699;
+    game.speedCost = 0.477;
     game.sacrificeMult = 0;
     save();
     location.reload();
@@ -76,7 +75,7 @@ function sacrifice() {
     game.sacrificeMult = addLogs(game.sacrificeMult, game.sacGain);
     game.floors = -Infinity;
     game.advance = game.sacrificeMult;
-    game.speedCost = 0.699;
+    game.speedCost = 0.477;
 
   }
 }
@@ -109,3 +108,4 @@ function updateAch() {
 }
 
 tab('elevator');
+

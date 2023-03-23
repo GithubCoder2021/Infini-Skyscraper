@@ -22,6 +22,7 @@ setInterval(function(){
   document.getElementById("sacButton").style.display = "inline-block";
   }else{
   document.getElementById("sacButton").style.display = "none";
+  updateAch();
   }
 },50);
 
@@ -29,7 +30,7 @@ function speedInc(){
 	if (game.floors >= game.speedCost){
   	game.floors = subtractLogs(game.floors,game.speedCost);
     game.advance = addLogs(game.advance,multiplyLogs(0,game.sacrificeMult));
-    game.speedCost = multiplyLogs(game.speedCost,0.4);
+    game.speedCost = multiplyLogs(game.speedCost,0.3);
     
   }
 }
@@ -60,7 +61,8 @@ function resetGame(){
 	game.advance = 0;
 	game.speedCost = 0.699;
   game.sacrificeMult = 0;
-   save();
+  save();
+  location.reload();
   }
 }
 
@@ -77,3 +79,29 @@ function sacrifice(){
 }
 
 loadGame();
+
+function tab(tab){
+	document.getElementById("elevator").style.display = "none";
+  document.getElementById("achievements").style.display = "none";
+  document.getElementById("options").style.display = "none";
+  document.getElementById(tab).style.display = "inline-block";
+}
+
+function updateAch(){
+	if (game.advance > 0) {
+  	document.getElementById("ach1").style.color = "#42f55d";
+  }
+  if (game.advance >= 1) {
+  	document.getElementById("ach2").style.color = "#42f55d";
+  }
+  if (game.floors >= 2.0086) {
+  	document.getElementById("ach3").style.color = "#42f55d";
+  }
+  if (game.floors >= 2.6989) {
+  	document.getElementById("ach4").style.color = "#42f55d";
+  }
+  if (game.sacrificeMult > 0) {
+  	document.getElementById("ach5").style.color = "#42f55d";
+  }
+}
+

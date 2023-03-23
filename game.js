@@ -1,7 +1,7 @@
 var game = {
  floors : -Infinity,
  advance: 0,
- speedCost: 0.699,
+ speedCost: 0.30103,
  sacrificeMult: 0,
  sacGain: 0
  };
@@ -59,10 +59,10 @@ function resetGame(){
  if (restart == true) {
 	game.floors = -Infinity;
 	game.advance = 0;
-	game.speedCost = 0.699;
-  game.sacrificeMult = 0;
-  save();
-  location.reload();
+	game.speedCost = 0.30103;
+  	game.sacrificeMult = 0;
+  	save();
+  	location.reload();
   }
 }
 
@@ -73,7 +73,7 @@ function sacrifice(){
   game.sacrificeMult = multiplyLogs(game.sacrificeMult,game.sacGain);
 	game.floors = -Infinity;
 	game.advance = game.sacrificeMult;
-	game.speedCost = 0.699;
+	game.speedCost = 0.30103;
   
   }
 }

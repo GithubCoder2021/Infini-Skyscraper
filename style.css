@@ -22,3 +22,11 @@ button{
   color: white;
   
 }
+
+#achievements{
+  display: none;
+}
+
+#options{
+  display: none;
+}
